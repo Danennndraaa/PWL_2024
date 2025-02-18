@@ -50,3 +50,6 @@ Route::get('/user/{name?}', function ($name='Danen') {
 Route::resource('photos', PhotoController::class)->except([ 
 'create', 'store', 'update', 'destroy' 
 ]); 
+
+Route::get('/greeting', [WelcomeController::class, 
+'greeting']);
